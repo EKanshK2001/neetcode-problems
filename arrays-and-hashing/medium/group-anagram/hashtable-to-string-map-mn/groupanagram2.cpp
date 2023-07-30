@@ -24,11 +24,6 @@ public:
 
         vector<vector<string>> result;
 
-        
-        // for (auto it = count.begin(); it != count.end(); it++) {
-        //     result.push_back(it->second);
-        // }
-
         //push string vectors in result vector
         for (auto& entry : count) {
             result.push_back(entry.second);
