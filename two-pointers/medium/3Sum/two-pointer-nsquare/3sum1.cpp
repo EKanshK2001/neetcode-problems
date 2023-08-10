@@ -1,3 +1,16 @@
+/**
+ * O(n^2), O(1)
+ * 
+ * Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+ * 
+ * link: https://leetcode.com/problems/3sum/
+ */
+
+/**
+ * @brief this algorithm works as the array is sorted
+ * we make the left and right pointers and increment left (as its lower) if the sum is lower than the target and decrement right (as its greater) if the sum is greater than the target. 
+ */
+
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
