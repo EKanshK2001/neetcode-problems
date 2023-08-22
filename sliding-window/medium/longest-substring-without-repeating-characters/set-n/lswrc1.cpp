@@ -30,7 +30,7 @@ public:
         int l = 0, r;
         unordered_set<char> charSet;
 
-        for (r = l; r < s.length(); r++) {      //right actually starts from the start this time
+        for (r = l; r < s.length(); r++) {      //right actually starts from the start (left) this time
             
             //when we find an old element
             while (charSet.find(s[r]) != charSet.end()) {
