@@ -14,7 +14,7 @@
  * Also, when we find a mid element to be greater than left most element, it means that sublist is sorted and we take the left most element to check if it is the minimum.
  * then increment left = mid + 1, to check right sublist for the anomaly is still not cleared.
  * 
- * If not, then find an even bigger anomaly. This can mean two things : 
+ * If not, then find an even bigger anomaly. This should mean two things : 
  * At its left it might contain even lower elements.
  * At its right it should be a sorted sublist. (this has to be a confirm case becuase its a rotated sorted array and if originally if right was lower than left then we have found a mid even lower than right)
  * all this becuase its rotated sorted, if this don't make sense then please refer to neetcode video solution, it might make you remember it or just do it on paper.
@@ -39,9 +39,10 @@ public:
             //binary search
             int mid = l + (r - l) / 2;
             //here we have to put a least value (if any from mid or left)
+            //also when we find a right sorted sublist similar to the else case below but we put the lower value in the res here
             res = min(res, nums[mid]);
 
-            //this case covers when we find anothers sorted sublist (this does not mean we found the lowest element)
+            //this case covers when we find a left half as sorted sublist (this does not mean we found the lowest element)
             //because we still had that anomaly of finding right pointer element lower than left
             //that means that lowest element is still in the right
             if (nums[mid] >= nums[l]) { 
