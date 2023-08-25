@@ -45,6 +45,9 @@ public:
         ListNode *mergedList = nullptr;
         //any operations done on current before the next seciton of code will lead to undefined behavior since it's not pointing to a valid node.
 
+        //bug (fixed) : since current is NULL, dereferencing it with current->next will cause undefined behavior or a segmentation fault. 
+        //Thats why we have to make the first iteration manually, to make mergedList non-null.
+        
         if (list1->val <= list2->val) {
             mergedList = list1;
             list1 = list1->next;
@@ -54,8 +57,6 @@ public:
             list2 = list2->next;
         }
 
-        //bug (fixed) : since current is NULL, dereferencing it with current->next will cause undefined behavior or a segmentation fault. 
-        //Thats why we have to make the first iteration manually, to make mergedList non-null.
 
         ListNode *current = mergedList;
 
