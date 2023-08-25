@@ -23,7 +23,7 @@
  * 
  * We solve reordering by taking advantage that we have an alternating pattern between the beginning of the list and the beginning of the end of list.
  * 
- * So we split and reverse the 2nd half of list so that we have forward facing links (so we can traverse actually)
+ * So we split and reverse the 2nd half of list so that we have forward facing links (so we can actually traverse from the end (right to left)).
  * 
  * 
  * technicalities:
@@ -32,6 +32,7 @@
  * - we need to make slow->next (first half) be null so that its not connected to second anymore
  * - merging requires the second to be null as the traverse end condition (same as reversing)
  */
+
 class Solution {
 public:
     void reorderList(ListNode* head) {

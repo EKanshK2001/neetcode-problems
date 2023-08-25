@@ -17,6 +17,12 @@ link : https://leetcode.com/problems/reverse-linked-list/
  * };
  */
 
+/*
+* basically the prev pointer will keep the turned nodes
+* current will traverse to the original current->next with the help of the nxt pointer
+* in the end prev will have the new head (i.e. the last node of original)
+*/
+
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -30,11 +36,6 @@ public:
         ListNode* current = head;
         ListNode* prev = NULL;
 
-        /*
-        basically the prev pointer will keep the turned nodes
-        current will traverse to nxt with the help of the nxt pointer
-        in the end prev will have the new head (i.e. the last node of original)
-        */
 
         while (current != NULL){
             //maintaining a next pointer relative to current (to keep track of original node next to current)

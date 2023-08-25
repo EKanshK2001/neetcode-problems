@@ -61,6 +61,6 @@ public:
             curr = curr->next->next;
         }
         
-        curr->next = nullptr;
+        curr->next = nullptr;       //this is to make the last element have a guaranteed null or end.
     }
 };

@@ -1,6 +1,6 @@
 /**
- * O(n), O(n) where n is the no. of nodes in the list.
- * set implementation, refer to floyd's tortoise and hare method for O(1) space method which is faster as well.
+ * O(n), O(1) where n is the no. of nodes in the list.
+ * floyd's tortoise and hare method.
  * 
  * Given head, the head of a linked list, determine if the linked list has a cycle in it.
  * 
