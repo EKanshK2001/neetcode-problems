@@ -6,6 +6,16 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 link : https://leetcode.com/problems/valid-anagram/
 */
 
+/**
+ * @brief this algorithm makes use of (kind of) hash functions. But really just an array.
+ * and the fact that anagrams contain the same elements in the same frequency.
+ * 
+ * we make a zero array of size 26 for all the alphabets, then just increment and decrement the value (0) for a character index.
+ * if they are really anagrams, then they should have the same characters the same no. of times.
+ * this means that incrementing and decrementing them the same no. of times, will result in them being the same or 0, in this case.
+ * 
+ * so we check for any non-zero element in the array later, and if found, its not an anagram or else it is.
+ */
 
 class Solution {
 public:
@@ -22,7 +32,7 @@ public:
             arr[t[i] - 'a']--;
         }
 
-        //check for still 0s
+        //check for non 0s if any
         for (int i = 0; i < 26; i++) {
             if (arr[i] != 0) return false;
         }
