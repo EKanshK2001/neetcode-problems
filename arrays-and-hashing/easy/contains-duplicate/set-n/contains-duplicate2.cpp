@@ -12,9 +12,9 @@ class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
 
-        /*solution 3 neetcode not as good, just better version of my map code   158ms, 69.4mb */
+        /*solution 3 neetcode not as good tho, 158ms, 69.4mb */
         
-        //hashmap O(n), space O(n)
+        //hashset O(n), space O(n)
         unordered_set<int> s;
         
         //if u find an earlier entry of that word, return true, else keep insert i.e. false

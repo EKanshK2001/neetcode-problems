@@ -6,14 +6,17 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 link : https://leetcode.com/problems/valid-anagram/
 */
 
-
+/**
+ * @brief basically if both of them are equal after sorting both strings, then yes else no.
+ * 
+ */
 class Solution {
 public:
     bool isAnagram(string s, string t) {
 
     //  22ms,7.3mb         Using Sorting    O(slogs + tlogt), O(1)
         
-        if (s.length() != t.length()) {
+        if (s.length() != t.length()) {     //basic check - if not of same length, return false.
             return false;
         }
         else {
@@ -26,5 +29,5 @@ public:
             }
             else return true;
         }
-
+    }
 };
