@@ -3,7 +3,7 @@ neetcode problems
 
 site: https://neetcode.io/practice
 
-I've been doing the neetcode 150 and blind 75 problems.
+I've been attempting the neetcode 150 and blind 75 problems.
 
 These are some problems whose solutions I upload as I've taken the #30dayschallenge for consistency.
 
